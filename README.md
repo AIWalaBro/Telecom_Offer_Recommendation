@@ -53,13 +53,16 @@ In unsupervised machine learning, the algorithm is trained on an unlabeled datas
 #### Package Requirements
 
 `!pip install numpy==1.22.4 --quiet`
+
 `!pip install pandas==1.3.5 --quiet`
+
 `!pip install scikit-learn==1.2.1  --quiet`
 
 # 1) Data Reading from Different Sources
 **AWS S3 - CSV**
 - Use the S3 public link to read the CSV file directly into a pandas DataFrame
 `s3_link = 'https://s3.amazonaws.com/projex.dezyre.com/recommender-system-for-telecom-products/materials/Telecom_data.csv'`
+
 `df = pd.read_csv(s3_link)`
 
 # 2) Exploratory Data Analysis
