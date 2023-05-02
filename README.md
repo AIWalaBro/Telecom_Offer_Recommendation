@@ -56,16 +56,16 @@ In unsupervised machine learning, the algorithm is trained on an unlabeled datas
 `!pip install pandas==1.3.5 --quiet`
 `!pip install scikit-learn==1.2.1  --quiet`
 
-### 1) Data Reading from Different Sources
+# 1) Data Reading from Different Sources
 **AWS S3 - CSV**
 - Use the S3 public link to read the CSV file directly into a pandas DataFrame
 `s3_link = 'https://s3.amazonaws.com/projex.dezyre.com/recommender-system-for-telecom-products/materials/Telecom_data.csv'`
 `df = pd.read_csv(s3_link)`
 
-### 2) Exploratory Data Analysis
+# 2) Exploratory Data Analysis
 **Data Exploration**
 
-## **Data Dictionary**
+### **Data Dictionary**
 
 
 
@@ -147,11 +147,11 @@ In unsupervised machine learning, the algorithm is trained on an unlabeled datas
 |Churn Value|	Binary Churn Value
 
 
-## 3)Data Processing
+### 3)Data Processing
  - **Missing Value Detection and Imputation**
  - **Outlier Detection and Imputation**
 
-## 4)Data Preprocessing and Leakage
+### 4)Data Preprocessing and Leakage
 
 # Feature engineering
 **1. Splitting the dataset into a training and production dataset**
@@ -169,9 +169,9 @@ Manhattan, cosine, and Euclidean distance are different distance metrics used in
 Manhattan distance, also known as taxicab distance or L1 distance, is a measure of the distance between two points in a n-dimensional space. It is called Manhattan distance because it is analogous to the distance a taxi would travel on the streets of Manhattan, where you can only move in straight lines along the grid.
 The formula for Manhattan distance between two points P and Q in n-dimensional space is:
 
-\begin{equation}
-d(P,Q) = |x_1-y_1| + |x_2-y_2| + ... + |x_n-y_n|
-\end{equation}
+
+`d(P,Q) = |x_1-y_1| + |x_2-y_2| + ... + |x_n-y_n|`
+
 
 where $x_1, x_2, ..., x_n$ are the coordinates of point $P$ and $y_1, y_2, ..., y_n$ are the coordinates of point $Q$.
 
@@ -179,23 +179,23 @@ where $x_1, x_2, ..., x_n$ are the coordinates of point $P$ and $y_1, y_2, ..., 
 Cosine similarity is a measure of the similarity between two non-zero vectors of an inner product space. It is the cosine of the angle between the two vectors and ranges from -1 to 1. A value of 1 indicates that the two vectors are identical, while a value of -1 indicates that they are completely dissimilar.
 The formula for cosine similarity between two vectors A and B is:
 
-\begin{equation}
-\text{cosine   similarity}(A, B) = \frac{A * B }{ ||A|| * ||B||}
-\end{equation}
+
+`{cosine   similarity}(A, B) = \frac{A * B }{ ||A|| * ||B||}`
+
 
 
 
 where $A * B$ is the dot product of vectors A and B, and $||A||$ and $||B||$ are the magnitudes of vectors A and B, respectively.
 
-###**Euclidean distance:**
+### **Euclidean distance:**
 Euclidean distance is a measure of the distance between two points in a n-dimensional space. It is called Euclidean distance because it is the distance between two points in a straight line, as defined by Euclidean geometry.
 The formula for Euclidean distance between two points P and Q in n-dimensional space is:
-\begin{equation}
-d(P,Q) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + ... + (x_n-y_n)^2}
-\end{equation}
+
+`d(P,Q) = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + ... + (x_n-y_n)^2}`
+
 where $x_1$, $x_2$, ..., $x_n$ are the coordinates of point P and $y_1, y_2, ..., y_n$ are the coordinates of point Q.
 
-## **The minimal threshold parameter**
+### **The minimal threshold parameter**
 
 Whenever we are building any framework, and especially unsupervised ones, it is important that we establish parameters that can help us have confidence in what we are doing.
 
@@ -203,7 +203,7 @@ In this particular case, we are assigning a minimal threshold of 10% for an offe
 
 This comes from the fact that we have 10 offers (A-> J). If we were to randomly assign an offer to a customer, we would likely give each offer an equal probability of being assigned, so 100%/10%. So given that, if we are going to recommend something, it needs to be better than the random assignment.
 
-## **Which distance to choose?**
+### **Which distance to choose?**
 
 In Summary
 *  Manhattan distance: This metric measures the distance between two points by summing the absolute differences between their coordinates. It is also called the "taxicab" or "city block" distance because it measures the distance a taxicab would have to travel to get from one point to another on a city grid. 
@@ -216,14 +216,14 @@ In general, if you have high-dimensional data or sparse data, Manhattan or cosin
 
 For this problem in particular, we recommend Manhattan or Cosine
 
-## **Bootstrapping the framework**
+### **Bootstrapping the framework**
 
 
 Especially in unsupervised learning problems, it is always a good idea to run several approaches ('bootstrap') and chose the most common answer amongst the different models. This mechanism is similar to what algorithms like random forest do, for example: they fit several trees and each tree votes the final classification of a sample.
 
 We are going to play with the 3 distances we have in our function + the number of customers we pull the data from in order to get a voted answer
 
-## **Conclusion**
+### **Conclusion**
 
 In this project we used a simple yet effective unsupervised model to provide offers to customers.
 
