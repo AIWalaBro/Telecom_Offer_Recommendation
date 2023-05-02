@@ -158,9 +158,9 @@ In unsupervised machine learning, the algorithm is trained on an unlabeled datas
 ### 4)Data Preprocessing and Leakage
 
 # Feature engineering
-**1. Splitting the dataset into a training and production dataset**
-**2. Converting the Month of Joining into a customer tenure**
-**3.Transforming Categorical Variables**
+- **1. Splitting the dataset into a training and production dataset**
+- **2. Converting the Month of Joining into a customer tenure**
+- **3.Transforming Categorical Variables**
 
 # Model Building and Testing
 ## Collaborative filtering
