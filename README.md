@@ -61,6 +61,7 @@ In unsupervised machine learning, the algorithm is trained on an unlabeled datas
 # 1) Data Reading from Different Sources
 **AWS S3 - CSV**
 - Use the S3 public link to read the CSV file directly into a pandas DataFrame
+
 `s3_link = 'https://s3.amazonaws.com/projex.dezyre.com/recommender-system-for-telecom-products/materials/Telecom_data.csv'`
 
 `df = pd.read_csv(s3_link)`
