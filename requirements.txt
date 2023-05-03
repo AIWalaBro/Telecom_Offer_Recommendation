@@ -3,3 +3,6 @@ numpy
 matplotlib
 scikit-learn
 seaborn
+
+# automatically triggered setup.py file
+-e .
